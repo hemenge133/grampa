@@ -14,7 +14,7 @@ module.exports = {
     siteDescription: `Landing page for the Menge Bed & Breakfast in Prince Eduard Island, Canada.`,
     siteLanguage: `en`,
     siteImage: ``,
-    author: `@haydenmenge`,
+    author: `@hmenge`,
   },
   plugins: [
     {
