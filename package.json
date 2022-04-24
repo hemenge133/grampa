@@ -13,7 +13,8 @@
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "npx gatsby clean && npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-jodie": "^3.0.0",
@@ -21,8 +22,10 @@
     "gatsby-omni-font-loader": "^2.0.0",
     "gatsby-plugin-gatsby-cloud": "^4.12.1",
     "gatsby-plugin-manifest": "^4.12.1",
+    "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sitemap": "^5.12.1",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
+    "gatsby-source-filesystem": "^4.12.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

@@ -7,23 +7,27 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/gatsby-config.js
-    siteTitle: `Jodie`,
-    siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
-    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://jodie.lekoarts.de`,
-    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+    siteTitle: `PEI B&B`,
+    siteTitleAlt: `PEI B&B - Bed and Breakfast in PEI`,
+    siteHeadline: `PEI B&B - Bed and Breakfast in Prince Eduard Island`,
+    siteUrl: `https://mengebnb.com`,
+    siteDescription: `Landing page for the Menge Bed & Breakfast in Prince Eduard Island, Canada.`,
     siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
+    siteImage: ``,
+    author: `@haydenmenge`,
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+	mergeCachingParams: false,
+        hostname: "http://mengebnb.s3-website.us-east-2.amazonaws.com/",
+      },
       resolve: `@lekoarts/gatsby-theme-jodie`,
       // See the theme's README for all available options
       options: {
         navigation: [
-          { name: `Projects`, slug: `/projects` },
-          { name: `Art`, slug: `/art` },
+          { name: `Sections`, slug: `/projects` },
           { name: `About`, slug: `/about` },
         ],
       },
